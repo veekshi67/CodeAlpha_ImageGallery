@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="title">CodeAlpha Image Gallery</h1>
+    <div class="container">
+        <div class="filters">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('animals')">Animals</button>
+    <button onclick="filterImages('people')">People</button>
+</div>
+    <div class="gallery">
+        <img src="https://picsum.photos/id/1015/300/200"  class="nature" onclick="openModal(this.src)">
+        <img src="https://picsum.photos/id/1016/300/200"  class="nature" onclick="openModal(this.src)">
+        <img src="https://picsum.photos/id/1018/300/200" class="nature" onclick="openModal(this.src)">
+        <img src="https://picsum.photos/id/1020/300/200" class="animals" onclick="openModal(this.src)">
+        <img src="https://picsum.photos/id/1024/300/200" class="animals" onclick="openModal(this.src)">
+        <img src="https://picsum.photos/id/1027/300/200" class="people"onclick="openModal(this.src)">
+        <img src="https://picsum.photos/id/237/200/300" class="animals" onclick="openModal(this.src)">
+        <img src="https://picsum.photos/id/22/200/300" class="people" onclick="openModal(this.src)">
+    </div>
+</div>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <button class="prev" onclick="changeImage(-1)">❮</button>
+    <img id="modalImg">
+    <button class="next" onclick="changeImage(1)">❯</button>
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
